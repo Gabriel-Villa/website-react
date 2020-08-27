@@ -5,10 +5,8 @@ import { MdGavel } from "react-icons/md";
 import { FaBars } from "react-icons/fa";
 import MenuItems from "./MenuItems";
 
-const linksStyled = {
-  color: "#fff",
-  fontSize: "16px",
-};
+import "../css/Navigation.css";
+
 const Nav = styled.nav`
   background: linear-gradient(
     90deg,
@@ -17,13 +15,13 @@ const Nav = styled.nav`
   );
 `;
 
-const NavBar = () => {
+const Navigation = () => {
   return (
     <>
       <Nav>
         <nav className="navbar navbar-expand-lg ">
           <div className="container">
-            <Link className="navbar-brand" style={linksStyled}>
+            <Link className="navbar-brand text-white">
               MyWebsite <MdGavel />
             </Link>
             <button
@@ -49,7 +47,7 @@ const NavBar = () => {
                   return (
                     <li key={index} className="nav-item p-2 mx-2">
                       <Link
-                        style={linksStyled}
+                        style={{ hover: "red" }}
                         className={item.className}
                         to={item.url}
                       >
@@ -67,4 +65,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navigation;

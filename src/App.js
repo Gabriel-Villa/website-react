@@ -4,12 +4,12 @@ import { BrowserRouter as Router ,Route, Switch } from 'react-router-dom';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import NavBar from './components/NavBar/NavBar'
+import NavBarContainer from './pages/NavBarContainer'
 
 const App = () => {
   return (
     <Router>
-      <NavBar />
+      <NavBarContainer />
       <Switch>
         <Route path="/" />
       </Switch>
