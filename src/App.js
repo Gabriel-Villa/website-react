@@ -1,11 +1,19 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router ,Route, Switch } from 'react-router-dom';
 
-function App() {
+import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import NavBar from './components/NavBar/NavBar'
+
+const App = () => {
   return (
-    <>
-      <h1>MY WEBSITE</h1>
-    </>
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route path="/" />
+      </Switch>
+    </Router>
   );
 }
 
