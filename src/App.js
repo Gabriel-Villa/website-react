@@ -6,8 +6,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Loader from './components/Loader';
 import useSetTimeOut from './hooks/useSetTimeOut';
-import NavBarContainer from './pages/NavBarContainer'
+import NavBarContainer from './pages/NavBarContainer';
+
 import Home from './pages/Home';
+import Products from './pages/Products';
+
+import FooterContainer from './pages/FooterContainer';
 
 const App = () => {
   const { loader } = useSetTimeOut();
@@ -18,7 +22,9 @@ const App = () => {
       <NavBarContainer />
       <Switch>
         <Route  exact path="/" component={Home} />
+        <Route  exact path="/products" component={Products} />
       </Switch>
+      <FooterContainer />
     </Router>
   );
 }

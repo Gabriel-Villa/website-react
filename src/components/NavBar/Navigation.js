@@ -13,6 +13,9 @@ const Nav = styled.nav`
     rgb(110, 94, 254) 0%,
     rgb(73, 63, 251, 1) 100%
   );
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 `;
 
 const Navigation = () => {

@@ -1,13 +1,18 @@
 import React from "react";
 import HeroSection from "../components/Hero/HeroSection";
-import { hero_1 } from "../components/Hero/Data";
+import Data  from "../components/Hero/Data";
 
 
 const Home = () => {
   return (
     <>
-      <HeroSection {...hero_1}/>
-
+      {
+        Data.map((hero) =>{
+          return (
+            <HeroSection {...hero}/>
+          )
+        })
+      }
     </>
   );
 };
