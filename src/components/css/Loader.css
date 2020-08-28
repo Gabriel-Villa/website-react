@@ -10,8 +10,9 @@
 .loader {
   color: #cc3333;
   text-indent: -9999em;
-  margin: 88px auto;
-  position: relative;
+  position: absolute;
+   top: 45%;
+   left: 50%;
   font-size: 11px;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
