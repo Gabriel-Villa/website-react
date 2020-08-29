@@ -24,7 +24,7 @@ const Navigation = () => {
       <Nav>
         <nav className="navbar navbar-expand-lg ">
           <div className="container">
-            <Link className="navbar-brand text-white">
+            <Link to="/" className="navbar-brand text-white">
               MyWebsite <MdGavel />
             </Link>
             <button

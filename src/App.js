@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router ,Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router , Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,7 +9,7 @@ import useSetTimeOut from './hooks/useSetTimeOut';
 import NavBarContainer from './pages/NavBarContainer';
 
 import Home from './pages/Home';
-import Products from './pages/Products';
+import ProductsContainer from './pages/ProductsContainer';
 
 import FooterContainer from './pages/FooterContainer';
 
@@ -22,7 +22,7 @@ const App = () => {
       <NavBarContainer />
       <Switch>
         <Route  exact path="/" component={Home} />
-        <Route  exact path="/products" component={Products} />
+        <Route  exact path="/products" component={ProductsContainer} />
       </Switch>
       <FooterContainer />
     </Router>

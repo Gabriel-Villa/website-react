@@ -1,12 +1,14 @@
 import React from "react";
+import Section from "../components/Section";
 
-
-const Home = () => {
+const Products = ({ data }) => {
   return (
     <>
-      PRODUCTS
+          {data.map((product) => {
+            return <Section key={product.id} {...product} />;
+          })} 
     </>
   );
 };
 
-export default Home;
+export default Products;
