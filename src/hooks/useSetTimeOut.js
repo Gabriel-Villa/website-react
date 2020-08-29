@@ -5,7 +5,7 @@ const useSetTimeOut = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoader(false);
-    }, 100);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 

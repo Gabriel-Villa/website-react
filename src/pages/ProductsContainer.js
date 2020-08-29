@@ -1,11 +1,19 @@
 import React from "react";
 import url from "../config";
+import Loading from "../components/Loader";
 import useEffect from "../hooks/useFetch";
+import FatalError from "./500";
 import Products from "./Products";
 import { BiLineChart } from "react-icons/bi";
 
 const Home = () => {
-  const { products, error } = useEffect(`${url}&q=product&image_type=photo`);
+  const { products, loading, error } = useEffect(`${url}&q=product&image_type=photo`);
+
+  if(loading)
+    return <Loading />
+   
+  if(error)
+    return <FatalError />  
 
   return (
     <>
