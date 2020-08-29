@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 const useFetch = (url) => {
   const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(4);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -20,7 +22,7 @@ const useFetch = (url) => {
     fetchImages();
   }, [url]);
 
-  return { products, loading, error };
+  return { products, loading, currentPage, setCurrentPage, postsPerPage,  error };
 };
 
 export default useFetch;
